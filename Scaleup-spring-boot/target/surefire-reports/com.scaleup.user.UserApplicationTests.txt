@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.scaleup.user.UserApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 21.066 s <<< FAILURE! - in com.scaleup.user.UserApplicationTests
+contextLoads(com.scaleup.user.UserApplicationTests)  Time elapsed: 0.061 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.HibernateException: Errors in named queries: 
+User.findByFirstNameAndLastNameAndEmail failed because of: org.hibernate.QueryException: could not resolve property: first of: com.scaleup.user.model.User [SELECT u FROM com.scaleup.user.model.User u WHERE u.first LIKE :uFirstName OR u.last LIKE :uLastName OR u.email LIKE :uemail]
+Caused by: javax.persistence.PersistenceException: 
+[PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.HibernateException: Errors in named queries: 
+User.findByFirstNameAndLastNameAndEmail failed because of: org.hibernate.QueryException: could not resolve property: first of: com.scaleup.user.model.User [SELECT u FROM com.scaleup.user.model.User u WHERE u.first LIKE :uFirstName OR u.last LIKE :uLastName OR u.email LIKE :uemail]
+Caused by: org.hibernate.HibernateException: 
+Errors in named queries: 
+User.findByFirstNameAndLastNameAndEmail failed because of: org.hibernate.QueryException: could not resolve property: first of: com.scaleup.user.model.User [SELECT u FROM com.scaleup.user.model.User u WHERE u.first LIKE :uFirstName OR u.last LIKE :uLastName OR u.email LIKE :uemail]
+

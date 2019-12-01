@@ -1,0 +1,8 @@
+com\scaleup\user\controller\UserController.class
+com\scaleup\UserApplication.class
+com\scaleup\user\repository\UserRepository.class
+com\scaleup\user\service\UserServiceImpl.class
+com\scaleup\user\service\UserService.class
+com\scaleup\swagger\SwaggeruiConfig.class
+com\scaleuo\user\exception\RecordNotFoundException.class
+com\scaleup\user\model\User.class
